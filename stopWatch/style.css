@@ -1,0 +1,27 @@
+#mainContent {
+  padding: 5px;
+  width: 720px;
+  margin: 0 auto;
+}
+
+#time {
+  background-color: #232323;
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+p {
+  margin: 0;
+}
+#timeHistory {
+  margin: 15px 0 0 0;
+}
+#timeHistory p.timerHistory {
+  background-color: bisque;
+  padding: 5px;
+}
+
+#timeHistory p.timerHistory:nth-child(odd) {
+  background-color: azure;
+}
