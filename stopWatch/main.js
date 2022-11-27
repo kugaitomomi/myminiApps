@@ -11,13 +11,10 @@ function stopWatch() {
     let p = document.createElement("p");
     p.classList.add("timerHistory");
     let today = new Date();
-    let nowTime =
-      today.getHours().toString().padStart(2, "0") +
-      "時" +
-      today.getMinutes().toString().padStart(2, "0") +
-      "分" +
-      today.getSeconds().toString().padStart(2, "0") +
-      "秒";
+    let nowTime = `${today.getHours().toString().padStart(2, "0")}時${today
+      .getMinutes()
+      .toString()
+      .padStart(2, "0")}分${today.getSeconds().toString().padStart(2, "0")}秒`;
     p.append(nowTime + text);
     timeHistory.append(p);
   }
