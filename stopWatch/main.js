@@ -19,12 +19,12 @@ function stopWatch() {
     timeHistory.append(p);
   }
 
-  startButton.addEventListener("click", function () {
+  startButton.addEventListener("click", () => {
     if (startTimer === null) {
       startButton.disabled = true;
       text = "開始";
       let i = 1;
-      let seconds = function () {
+      let seconds = () => {
         if (i === 10) {
           music.play();
           clearInterval(startTimer);
@@ -44,20 +44,12 @@ function stopWatch() {
     }
   });
 
-  endButton.addEventListener("click", function () {
+  endButton.addEventListener("click", () => {
     startButton.disabled = false;
     text = "終了";
     if (startTimer !== null) {
       clearInterval(startTimer);
       startTimer = null;
-      let today = new Date();
-      let nowTime =
-        today.getHours().toString().padStart(2, "0") +
-        "時" +
-        today.getMinutes().toString().padStart(2, "0") +
-        "分" +
-        today.getSeconds().toString().padStart(2, "0") +
-        "秒";
       addMessage(text);
     }
   });
