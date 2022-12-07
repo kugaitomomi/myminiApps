@@ -1,0 +1,14 @@
+.frame {
+  width: 100%;
+}
+.frameIn {
+  width: 250px;
+  /* display: flex; */
+  overflow: hidden;
+}
+.frameIn div {
+  display: none;
+}
+ul {
+  list-style-type: none;
+}
