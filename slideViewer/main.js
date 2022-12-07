@@ -83,12 +83,16 @@ class PhotoViewer {
       i--;
       j--;
       countText.innerHTML = j;
-      if (i < 0) {
+      if (i === 0) {
         if (j <= 0) {
           j = 1;
           countText.innerHTML = j;
         }
         i = 0;
+      } else if (i <= -1) {
+        i = slider.length - 1;
+        j = slider.length;
+        countText.innerHTML = j;
       }
       slider[i].style.display = "block";
     });
